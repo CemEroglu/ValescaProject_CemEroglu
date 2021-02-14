@@ -1,0 +1,15 @@
+.product-detail-title{
+    font-size: 30px;
+}
+.product-detail-description{
+    font-size: 13px;
+}
+.product-detail-category{
+    font-size: 20px;
+}
+.product-detail-price{
+    font-size: 27px;
+}
+.add-to-cart-button{
+    background-color: #0079D7 !important;
+}

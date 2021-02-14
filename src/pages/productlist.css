@@ -1,0 +1,31 @@
+.product-cart {
+    cursor: pointer;
+    height: 450px;
+  }
+  .product-cart:hover{
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+    transition-delay: 0.3s;
+  }
+.open-search {
+    position: fixed;
+    right: 50px;
+    bottom: 40px;
+  }
+  .open-search button {
+    display: block;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: rgb(24, 167, 63);
+    background-image: url('../icons/carticon3.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 32px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    font-size: 0;
+    outline: 0;
+  }
+  .category-title{
+    font-size: 30px;
+  }

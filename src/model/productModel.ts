@@ -6,5 +6,4 @@ interface Product {
     description:string;
     image:string;
 }
-
 export default Product;

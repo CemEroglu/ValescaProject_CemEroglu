@@ -36,12 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-.productcart {
-  cursor: pointer;
-}
-.productcart:hover{
-  transform: scale(1.2);
-  transition-duration: 0.5s;
-  transition-delay: 0.3s;
-}
