@@ -3,6 +3,8 @@ import '../App.css'
 import { Link, useHistory } from 'react-router-dom'
 import { Button, Card } from "react-bootstrap";
 import './product.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 type ProductProps = {
     id: number,
     title: string,
@@ -67,6 +69,15 @@ const Product = ({ id, title, price, category, description, image }: ProductProp
             cartdata = newarray
         }
         sessionStorage.setItem('cartdata', JSON.stringify(cartdata))
+        toast('The product added to your cart!', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: false,
+            progress: undefined,
+        });
     }
     return (
         <div className="mx-2 my-3" style={{ height: '400px' }}>

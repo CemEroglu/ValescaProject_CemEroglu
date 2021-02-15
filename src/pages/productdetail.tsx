@@ -4,6 +4,8 @@ import * as ProductServices from '../services/product-services'
 import Header from '../components/header'
 import { useHistory, useParams } from 'react-router-dom'
 import { Button } from "react-bootstrap";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './productdetail.css'
 interface detail {
     'itemid': number,
@@ -86,25 +88,35 @@ const ProductDetailPage = () => {
                 cartdata = newarray
             }
             sessionStorage.setItem('cartdata', JSON.stringify(cartdata))
+            toast('The product added to your cart!', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: false,
+                progress: undefined,
+            });
         }
     }
     return (
         <div>
             <Header></Header>
+            <ToastContainer />
             <div className="container">
                 {productData && productData.itemid && productData.price && productData.image && productData.description && productData.title && productData.category ? (
                     <div>
                         <div key={productData.itemid} className="row mt-5 pl-0">
                             <div className="col-4">
-                                <img className="card-img-top mt-3" src={productData.image}/>
+                                <img className="card-img-top mt-3" src={productData.image} />
                             </div>
 
                             <div className="col-6 ml-5 ">
                                 <div className="row my-2"><span className="product-detail-title">
                                     {productData.title}</span>
-                                    </div>
-                                <div className="row mb-2"><span  className="product-detail-description" >{productData.description}</span></div>
-                                <div className="row text-uppercase"><a href={"/category/" + productData.category} ><span  className="product-detail-category">{productData.category}</span></a>
+                                </div>
+                                <div className="row mb-2"><span className="product-detail-description" >{productData.description}</span></div>
+                                <div className="row text-uppercase"><a href={"/category/" + productData.category} ><span className="product-detail-category">{productData.category}</span></a>
                                 </div>
                                 <div className="row mb-2"><span className="product-detail-price">Price: {productData.price}</span></div>
                                 <div className="row ">
@@ -121,6 +133,7 @@ const ProductDetailPage = () => {
                             history.push('/cart');
                         }
                         }>Go to Cart</button>
+
                     </div>
                 </div>
             </div>

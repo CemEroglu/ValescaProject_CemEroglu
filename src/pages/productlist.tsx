@@ -6,6 +6,8 @@ import Product from '../components/product'
 import ProductModel from '../model/productModel'
 import { useHistory, useParams } from 'react-router-dom'
 import './productlist.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ProductListPage = () => {
     const history = useHistory();
@@ -31,7 +33,8 @@ const ProductListPage = () => {
             <Header></Header>
             <div className="container">
                 <div className="category-title text-capitalize">{title}</div>
-                <hr/>
+                <hr />
+                <ToastContainer />
                 <div className="row">
                     {products.map((item: any) => {
                         return <div key={item.id} className="col-lg-3 col-md-6 col-sm-12 product-cart">
