@@ -69,7 +69,7 @@ const Product = ({ id, title, price, category, description, image }: ProductProp
             cartdata = newarray
         }
         sessionStorage.setItem('cartdata', JSON.stringify(cartdata))
-        toast('The product added to your cart!', {
+        toast('🛒The product is added to your cart.', {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
