@@ -133,7 +133,6 @@ const ProductDetailPage = () => {
                             history.push('/cart');
                         }
                         }>Go to Cart</button>
-
                     </div>
                 </div>
             </div>

@@ -49,7 +49,6 @@ const ProductListPage = () => {
                         }
                         }>Go to Cart</button>
                     </div>
-
                 </div>
             </div>
         </div>
